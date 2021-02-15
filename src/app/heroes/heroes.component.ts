@@ -9,8 +9,6 @@ import { HeroService } from '../service/hero.service';
 })
 export class HeroesComponent implements OnInit {
 
-  @Input() phraseString: string = '';
-
   heroList: Hero[] = this.heroService.getAll();
   phrase: string = '';
 
@@ -25,6 +23,4 @@ export class HeroesComponent implements OnInit {
   onChangePhrase(event: Event): void {
     this.phrase = (event.target as HTMLInputElement).value;
   }
-
-
 }

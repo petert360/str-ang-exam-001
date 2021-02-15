@@ -15,7 +15,7 @@ export class HeroService {
     {id: 6, name: 'Speedy Twist', superPower: 'Shapeshift', address: 'London'},
     {id: 7, name: 'Captain Hero', superPower: 'Super strength', address: 'Miami'},
     {id: 8, name: 'Lieutenant Falcon', superPower: 'Invisibility', address: 'Atlanta'},
-    {id: 9, name: 'Flying Flame.', superPower: 'Super agility', address: 'Washinton'},
+    {id: 9, name: 'Flying Flame', superPower: 'Super agility', address: 'Washinton'},
     {id: 10, name: 'Justice Blast', superPower: 'Control metal', address: 'Austin'}
   ];
 
