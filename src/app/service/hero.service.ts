@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { Hero } from '../model/hero';
 
 @Injectable({
@@ -7,7 +6,7 @@ import { Hero } from '../model/hero';
 })
 export class HeroService {
 
-  private list: Hero[] = [
+ list: Hero[] = [
     {id: 1, name: 'Blue Granite', superPower: 'Control light', address: 'New York'},
     {id: 2, name: 'Blue Man', superPower: 'Control wind', address: 'Los Angeles'},
     {id: 3, name: 'Silver Twist', superPower: 'Control sound', address: 'Berlin'},
@@ -20,15 +19,9 @@ export class HeroService {
     {id: 10, name: 'Justice Blast', superPower: 'Control metal', address: 'Austin'}
   ];
 
-  list$: BehaviorSubject<Hero[]> = new BehaviorSubject<Hero[]>([]);
-
   constructor() { }
 
-  getAll(): void {
-    this.list$.next(this.list);
-  }
-
-  getAllAlternative(): Hero[] {
+  getAll(): Hero[] {
     return this.list;
   }
 }

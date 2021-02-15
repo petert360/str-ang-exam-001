@@ -1,8 +1,5 @@
-<div class="form-group">
-  <input type="text"
-    class="form-control" name="filter" id="filter" placeholder="Filter...">
-</div>
-
+<!-- <input (keyup)="onChangePhrase($event)" type="text" class="form-control mb-3" name="filter" id="filter" placeholder="Filter..."> -->
+<input (keyup)="onChangePhrase($event)" class="form-control mb-3" type="text" placeholder="Search in name...">
 
 <div class="row">
     <div class="col-12">
@@ -16,7 +13,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let hero of heroList$ | async | filter:phraseString:'name'">
+                <tr *ngFor="let hero of heroList | filter:phrase:'name'">
                     <td>{{ hero.id }}</td>
                     <td>{{ hero.name }}</td>
                     <td>{{ hero.superPower }}</td>

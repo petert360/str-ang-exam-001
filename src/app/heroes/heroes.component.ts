@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { Hero } from '../model/hero';
 import { HeroService } from '../service/hero.service';
 
@@ -12,14 +11,20 @@ export class HeroesComponent implements OnInit {
 
   @Input() phraseString: string = '';
 
-  heroList$: BehaviorSubject<Hero[]> = this.heroService.list$;
+  heroList: Hero[] = this.heroService.getAll();
+  phrase: string = '';
 
   constructor(
     private heroService: HeroService,
   ) { }
 
   ngOnInit(): void {
-    this.heroService.getAll();
+
   }
+
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
+  }
+
 
 }
