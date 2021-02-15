@@ -12,7 +12,7 @@ const routes: Routes = [
     path: 'heroes',
     component: HeroesComponent,
   },
-  { //fallback url
+  { //Fallback URL
     path: '**',
     redirectTo: '',
   }
