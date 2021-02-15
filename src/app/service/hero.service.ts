@@ -20,7 +20,11 @@ export class HeroService {
     {id: 10, name: 'Justice Blast', superPower: 'Control metal', address: 'Austin'}
   ];
 
-  list$: BehaviorSubject<Hero[]> = new BehaviorSubject<Hero[]>(this.list);
+  list$: BehaviorSubject<Hero[]> = new BehaviorSubject<Hero[]>([]);
 
   constructor() { }
+
+  getAll(): void {
+    this.list$.next(this.list);
+  }
 }
