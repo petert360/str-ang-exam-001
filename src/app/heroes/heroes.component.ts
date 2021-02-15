@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Hero } from '../model/hero';
 import { HeroService } from '../service/hero.service';
@@ -9,6 +9,8 @@ import { HeroService } from '../service/hero.service';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
+
+  @Input() phraseString: string = '';
 
   heroList$: BehaviorSubject<Hero[]> = this.heroService.list$;
 

@@ -16,7 +16,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let hero of heroList$ | async">
+                <tr *ngFor="let hero of heroList$ | async | filter:phraseString:'name'">
                     <td>{{ hero.id }}</td>
                     <td>{{ hero.name }}</td>
                     <td>{{ hero.superPower }}</td>

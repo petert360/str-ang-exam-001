@@ -27,4 +27,8 @@ export class HeroService {
   getAll(): void {
     this.list$.next(this.list);
   }
+
+  getAllAlternative(): Hero[] {
+    return this.list;
+  }
 }
