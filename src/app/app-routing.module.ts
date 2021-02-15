@@ -12,11 +12,10 @@ const routes: Routes = [
     path: 'heroes',
     component: HeroesComponent,
   },
-  { //Fallback URL
+  { // Fallback URL
     path: '**',
     redirectTo: '',
-  }
-
+  },
 ];
 
 @NgModule({
