@@ -12,6 +12,8 @@ export class HeroesComponent implements OnInit {
   heroList: Hero[] = this.heroService.getAll();
   phrase: string = '';
 
+  columnKey: string = '';
+
   constructor(
     private heroService: HeroService,
   ) { }
@@ -22,5 +24,9 @@ export class HeroesComponent implements OnInit {
 
   onChangePhrase(event: Event): void {
     this.phrase = (event.target as HTMLInputElement).value;
+  }
+
+  onColumnSelect(key: string): void {
+    this.columnKey = key;
   }
 }

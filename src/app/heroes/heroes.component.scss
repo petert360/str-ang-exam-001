@@ -1,0 +1,14 @@
+table {
+    thead {
+        th:hover {
+            background-color: #ddd;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+    tbody {
+        td:hover {
+            user-select: none;
+        }
+    }
+}
